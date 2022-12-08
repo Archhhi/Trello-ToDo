@@ -1,6 +1,12 @@
 .mainWrapper {
     display: flex;
+    flex-direction: column;
+    row-gap: 40px;
     width: 720px;
+}
+
+.topContent {
+    display: flex;
     justify-content: space-between;
     column-gap: 15px;
 }
@@ -143,4 +149,20 @@
     font-family: sans-serif;
     line-height: 100%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 770px) {
+    .mainWrapper {
+        width: 100%;
+    }
+
+    .mainContent {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .mainContent {
+        width: 70%;
+    }
 }

@@ -5,7 +5,7 @@
     row-gap: 50px;
     width: 100vw;
     height: 100vh;
-    padding: 100px 0;
+    padding: 100px 100px;
     background-color: #76bb99;
     box-sizing: border-box;
 }
@@ -13,4 +13,12 @@
 .columnWrapper {
     display: flex;
     column-gap: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+    .columnWrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 15px;
+    }
 }

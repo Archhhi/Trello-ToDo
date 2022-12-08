@@ -59,90 +59,91 @@ const TaskDetails = () => {
 
   return (
     <div className={s.mainWrapper}>
-      <div className={s.mainContent}>
-        <div
-          className={s.mainTitle}
-          onClick={() => setIsActiveEditTitleTask(true)}
-        >
-          <span>{task?.taskNumber}.</span>
-          {!isActiveEditTitleTask ? (
-            <h1>{task?.title}</h1>
-          ) : (
-            <input
-              type="text"
-              autoFocus
-              value={data.title}
-              onBlur={onChangeTaskTitle}
-              onKeyPress={(e) => e.key === 'Enter' && onChangeTaskTitle()}
-              onChange={(e) => setData({ ...data, title: e.target.value })}
-            />
-          )}
-        </div>
-
-        <div className={s.description}>
-          <h2>Описание</h2>
-          <div className={s.textAreaWrapper}>
-            <textarea
-              value={data.description}
-              placeholder={'Добавить более подробное описание...'}
-              onChange={(e) =>
-                setData({ ...data, description: e.target.value })
-              }
-            />
-            {data.description && (
-              <button
-                className={s.descButton}
-                disabled={data.description === task?.description}
-                onClick={onSaveDescription}
-              >
-                Сохранить
-              </button>
+      <div className={s.topContent}>
+        <div className={s.mainContent}>
+          <div
+            className={s.mainTitle}
+            onClick={() => setIsActiveEditTitleTask(true)}
+          >
+            <span>{task?.taskNumber}.</span>
+            {!isActiveEditTitleTask ? (
+              <h1>{task?.title}</h1>
+            ) : (
+              <input
+                type="text"
+                autoFocus
+                value={data.title}
+                onBlur={onChangeTaskTitle}
+                onKeyPress={(e) => e.key === 'Enter' && onChangeTaskTitle()}
+                onChange={(e) => setData({ ...data, title: e.target.value })}
+              />
             )}
           </div>
-        </div>
 
-        <Subtasks
-          data={data}
-          activeEditSubTask={activeEditSubTask}
-          setData={setData}
-          setActiveEditSubTask={setActiveEditSubTask}
-        />
-      </div>
-      <div className={s.sideWrapper}>
-        <div
-          className={s.sideCol}
-          onBlur={() => setIsActiveChangePriorityTask(false)}
-        >
-          <span className={s.sideColTitle}>Приоритет</span>
-          {!isActiveChangePriorityTask ? (
-            <span
-              className={s.sideColContent}
-              onClick={() => setIsActiveChangePriorityTask(true)}
-            >
-              {task?.priority}
-            </span>
-          ) : (
-            <select
-              autoFocus
-              defaultValue={task?.priority}
-              onChange={(e) => onChangePriorityTask(e.target.value)}
-            >
-              <option value={TASK_PRIORITY.LOW}>{TASK_PRIORITY.LOW}</option>
-              <option value={TASK_PRIORITY.MIDDLE}>
-                {TASK_PRIORITY.MIDDLE}
-              </option>
-              <option value={TASK_PRIORITY.HIGH}>{TASK_PRIORITY.HIGH}</option>
-              <option value={TASK_PRIORITY.CRITICAL}>
-                {TASK_PRIORITY.CRITICAL}
-              </option>
-            </select>
-          )}
+          <div className={s.description}>
+            <h2>Описание</h2>
+            <div className={s.textAreaWrapper}>
+              <textarea
+                value={data.description}
+                placeholder={'Добавить более подробное описание...'}
+                onChange={(e) =>
+                  setData({ ...data, description: e.target.value })
+                }
+              />
+              {data.description && (
+                <button
+                  className={s.descButton}
+                  disabled={data.description === task?.description}
+                  onClick={onSaveDescription}
+                >
+                  Сохранить
+                </button>
+              )}
+            </div>
+          </div>
         </div>
-        <div className={s.sideCol}>
-          <span className={s.sideColTitle}>Дата создания</span>
-          <span className={s.sideColContent}>{task?.created}</span>
+        <div className={s.sideWrapper}>
+          <div
+            className={s.sideCol}
+            onBlur={() => setIsActiveChangePriorityTask(false)}
+          >
+            <span className={s.sideColTitle}>Приоритет</span>
+            {!isActiveChangePriorityTask ? (
+              <span
+                className={s.sideColContent}
+                onClick={() => setIsActiveChangePriorityTask(true)}
+              >
+                {task?.priority}
+              </span>
+            ) : (
+              <select
+                autoFocus
+                defaultValue={task?.priority}
+                onChange={(e) => onChangePriorityTask(e.target.value)}
+              >
+                <option value={TASK_PRIORITY.LOW}>{TASK_PRIORITY.LOW}</option>
+                <option value={TASK_PRIORITY.MIDDLE}>
+                  {TASK_PRIORITY.MIDDLE}
+                </option>
+                <option value={TASK_PRIORITY.HIGH}>{TASK_PRIORITY.HIGH}</option>
+                <option value={TASK_PRIORITY.CRITICAL}>
+                  {TASK_PRIORITY.CRITICAL}
+                </option>
+              </select>
+            )}
+          </div>
+          <div className={s.sideCol}>
+            <span className={s.sideColTitle}>Дата создания</span>
+            <span className={s.sideColContent}>{task?.created}</span>
+          </div>
         </div>
       </div>
+      <Subtasks
+        data={data}
+        activeEditSubTask={activeEditSubTask}
+        setData={setData}
+        setActiveEditSubTask={setActiveEditSubTask}
+      />
     </div>
   )
 }

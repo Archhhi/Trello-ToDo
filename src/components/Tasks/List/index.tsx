@@ -29,7 +29,6 @@ const TasksList = React.memo(
       taskTitle.trim() && dispatch(createTask({ id, title: taskTitle }))
       setTaskTitle('')
     }
-    console.log(searchValue)
 
     const taskItems = tasks
       .filter(
