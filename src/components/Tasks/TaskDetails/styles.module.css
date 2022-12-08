@@ -1,0 +1,146 @@
+.mainWrapper {
+    display: flex;
+    width: 720px;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    width: 500px;
+}
+
+.mainTitle {
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+    font-family: sans-serif;
+}
+
+.mainTitle:hover {
+    cursor: pointer;
+}
+
+.mainTitle span {
+    line-height: 100%;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.mainTitle h1 {
+    margin: 0;
+    line-height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.mainTitle input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+    padding: 10px 10px;
+    resize: none;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.description h2 {
+    margin: 0;
+    line-height: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.description textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+.textAreaWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.descButton {
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 90px;
+    background-color: #0079bf;
+    line-height: 100%;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.descButton:hover {
+    cursor: pointer;
+    background-color: #0070b0;
+}
+
+.descButton:disabled {
+    background-color: #a1a1a1;
+    cursor: no-drop;
+}
+
+.sideWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 200px;
+    height: 100px;
+    margin-top: 112px;
+}
+
+.sideCol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 5px 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sideColTitle {
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 100%;
+}
+
+.sideCol select {
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sideColContent {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    line-height: 100%;
+    cursor: pointer;
+}

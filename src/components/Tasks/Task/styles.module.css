@@ -1,0 +1,17 @@
+.task {
+    display: flex;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+.task span {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.task:hover {
+    cursor: pointer;
+    background-color: #f9f9f9;
+}

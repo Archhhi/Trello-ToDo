@@ -1,0 +1,122 @@
+.subtaskInputWrapper {
+    display: flex;
+    column-gap: 5px;
+}
+
+.subtaskAddWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.subtaskAddWrapper input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #eeeeee;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+.subtaskAddBtnWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.subtaskAddBtnWrapper img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.subtaskAddBtnWrapper img:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.subtaskWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    font-family: sans-serif;
+}
+
+.subtaskWrapper h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.subtaskButton {
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 130px;
+    background-color: #0079bf;
+    line-height: 100%;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+
+.subtaskButton:hover {
+    cursor: pointer;
+    background-color: #0070b0;
+}
+
+.subtaskTitle {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.subtaskTitle:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+
+.editTitleSubtaskWrapper {
+    display: flex;
+    column-gap: 5px;
+}
+
+.editTitleSubtaskWrapper input {
+    column-gap: 5px;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+    font-family: sans-serif;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.editTitleSubtaskWrapper button {
+    border: none;
+    background-color: #0079bf;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.editTitleSubtaskWrapper button:hover{
+    cursor: pointer;
+    background-color: #0070b0;
+}
+
+.editTitleSubtaskWrapper img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.editTitleSubtaskWrapper img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
